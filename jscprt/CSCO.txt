@@ -1,0 +1,7 @@
+192.168.0.0 this class has about 254 network addrses
+routers are connected with serial cable
+there are three types of routing 
+these are 1) static routing
+              2)dynamic routing now used inreal world
+				3)defoualt routing
+routing means advertizing network addresses to another router

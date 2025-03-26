@@ -1,0 +1,244 @@
+<?php   
+ session_start();
+ include("connection.php");
+ 
+ 
+ 
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+if (document.images) {     // Preloaded images
+demo1 = new Image();
+demo1.src="erm/imagesw.jpg"
+demo2 = new Image();
+demo2.src="images/DSC01867.jpg"
+demo3 = new Image();
+demo3.src="images/DSC01899.jpg"
+
+
+demo4 = new Image();
+demo4.src="images/DSC01909.jpg"
+demo5 = new Image();
+demo5.src="images/DSC01908.jpg" 
+demo6= new Image();
+demo6. src="images/DSC01872.jpg"
+demo7=new Image();
+demo7.src="images/DSC01865.jpg"
+}
+function timeimgs(numb) {  // Reusable timer
+thetimer = setTimeout("imgturn('" +numb+ "')", 2000);
+}
+
+function imgturn(numb) {   // Reusable image turner
+if (document.images) {
+
+if (numb == "7") {         // This will loop the image
+document["demo"].src = eval("demo7.src");
+timeimgs('1');
+}
+
+else {
+document["demo"].src = eval("demo" + numb + ".src");
+
+timeimgs(numb = ++numb);
+}
+}
+}
+</script>
+<title>Abba tour and travel</title>
+<link rel="icon" type="image/ico" href="images/App Icon.ico"/>
+<link rel="stylesheet" href="css/newstyle.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/3.css" type="text/css" media="all" />
+    <link href="themes/4/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="themes/4/js-image-slider.js" type="text/javascript"></script>
+    <link href="generic.css" rel="stylesheet" type="text/css" />
+</head>
+<body onLoad="timeimgs('1');" >
+<center>
+<table style="border:1px solid gray" width="1409px">
+<tr>
+<td colspan="3" height="100px" style="border:1px solid gray"><img src="image/logo.jpg" height="150px" width="1404px"></td>
+</tr>
+<tr>
+<td colspan="3" height="40px" width="1325px" style="border:1px solid gray" id="dropdown">
+<!--Main Menus-->
+<li><b><a href="index.php">Home</a></b></li>
+<li><b><a href="#">Vehicle Type</a></b>
+  <ul>
+           <li><b><a href="toyta1.php">Toyota</a></b></li>
+			<li><b><a href="mercedes1.php">mercedes</a></b></li>
+			<li><b><a href="executive1.php">executive</a></b></li>
+			<li><b><a href="Honda1.php">Honda</a></b></li>
+			<li><b><a href="yaristoyota1.php">yaristoyota</a></b></li>
+          </ul>
+		  </li>
+        
+		  </li>
+	  <li style="padding-left:850px"><b><a href="login.php">Login</a><b/></li>
+	  <li style="padding-left:20px"><b><a href="Signup.php">Signup</a></b></li>
+<!--End Of Main menus-->
+</td>
+</tr>
+</table>
+<table style="border:solid gray">
+<tr>
+<td colspan="3" height="190px" style="border:0px solid gray"" valign="top">
+<!--Slide show-->
+<div id="sliderFrame">
+        <div id="slider">
+           <img src="images/product-img1.jpg">
+            
+         <img src="images/DSC0186a.jpg" />
+		  <img src="images/DSCA.jpg" />
+		  <img src="images/DSC01870.jpg" />
+		   <img src="images/b1.jpg" />
+		    <img src="images/b2.jpg" />
+			 <img src="images/b3.jpg" />
+        </div>
+        <!--Custom navigation buttons on both sides-->
+        <div class="group1-Wrapper">
+            <a onclick="imageSlider.previous()" class="group1-Prev"></a>
+            <a onclick="imageSlider.next()" class="group1-Next"></a>
+        </div>
+        <!--nav bar-->
+        <div style="text-align:center;padding:2px;z-index:2;">
+            <a onclick="imageSlider.previous()" class="group2-Prev"></a>
+            <a id='auto' onclick="switchAutoAdvance()"></a>
+            <a onclick="imageSlider.next()" class="group2-Next"></a>
+        </div>
+    </div>
+<!--End of slide show-->
+</td>
+</tr>
+</table>
+<table style="border:1px solid gray" width="1415px">
+<tr>
+<td height="500px" width="200px" bgcolor="#3C598E" id="menu-bar"style="border:0px solid #000000" valign="top">
+<!--Side Bar-->
+<table width="25%">
+
+ 
+ <tr>
+ <td>
+  <a href="photogalary.php">PhotoGallary</a>
+</td> 
+ </tr>
+ <tr>
+ <td>
+  <a href="contactUs.php">contactUs</a>
+
+</td> 
+ </tr>
+ <tr>
+ <td>
+  <a href="AboutUs.php">About Us</a>
+</td> 
+ </tr>
+ 
+ 
+ 
+  </table>
+</td> 
+<!--End Of Side Bar-->
+
+<td width="470px" style="border:0px solid #336699" valign="top">
+<form action="login.php" method="post" onsubmit="return validateForm()">
+<table bgcolor="#FFFFFF"style="border:0px solid #000000" width="1001px" height="600px">
+<tr><td valign="top">
+<form action="login.php" align="center" method="post" onsubmit='return formValidation()'>
+<table style="border:1px solid black; border-radius:50px;margin-top:15px;box-shadow:8px 15px 8px black;" width="600px" height="300px" align="center">
+<tr><td colspan=2 align=right><font color=black><p style="margin-right:3%;">(<font color=red>*</font>)Require</td></tr><tr>
+<tr>
+<td colspan=2 align=center><font color=blue size=4px>Members Login </td>
+</tr>
+<tr>
+<td><font color=red> * </font><font color=black size=4px>Email</td><td><input type="text" name="mail" class="ed"  pattern="(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})"title="Enter the Email" value="" size="20%" id="mail" placeholder="e_mail"></input></td></tr>
+<tr>
+<td><font color=red> * </font><font color=black size=4px>Password</td><td><input type="password" name="txt_password"class="ed"  required x-moz-errormessage="Please Enter  password "   title="Enter the Password" value="" size="20%" id="txt_password" placeholder="Password"></input></td></tr>
+<tr>
+<td colspan=2 align=center><input type='submit' value='login' name='submitMain' Onclick="return check(this.form);"/>
+<input type='reset' value='Reset'/></td></tr>
+<tr>
+<td colspan=2 align=center><a href="forget.php"><font color=blue>Forget Password?</a></td></tr>
+</form>
+<?php
+	if(isset($_POST['submitMain']))
+ {
+   $user =$_POST['mail'];
+   $_SESSION['mail']=$_POST['mail'];
+   $password=$_POST['txt_password'];
+   $query = "SELECT * FROM register WHERE 	e_mail= '{$user}' AND password= '{$password}' ;";
+   $result_set=mysql_query($query);
+		// TO check that at least one row was returned 
+		$rowCheck = mysql_num_rows($result_set);
+		
+		$row=mysql_fetch_array($result_set); 
+		 if($row['role']==1){ 
+		 $_SESSION['e_mail']=$row['e_mail'];
+        echo "<script>window.location='admin.php';</script>";
+			} 
+			else if($row['role']==2){ 
+		$_SESSION['e_mail']=$row['e_mail'];
+        echo "<script>window.location='manager.php';</script>";
+			}
+			else if($row['role']==3){ 
+			$_SESSION['e_mail']=$row['e_mail'];
+           echo "<script>window.location='receptionist.php';</script>";
+			}
+						else if($row['role']==4){ 
+						$_SESSION['e_mail']=$row['e_mail'];
+						echo "<script>window.location='customer.php';</script>";
+           
+			}
+		else {
+		
+		echo"<p  class='wrong' align=center><font color=red size=6px>Role, User Name & Password Not Match !!</font></p>"; 
+		
+		}
+}
+mysql_close($conn);
+?>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td width="200px" bgcolor="#3C598E"style="border:0px solid #000000" valign="center">
+<fieldset style=" border-color:#45565C; height:510px;"><b><b><b><b>
+
+<legend><font color="white" size="5px">Advertisement</font></legend>
+
+<img src="images/DSC01870.jpg" height="400px" width="150px" name="demo" align="center">
+</fieldset></font>
+</td>
+</tr>
+
+<td colspan="3" bgcolor="#000000" height="60px" style="border:0px solid #000000"align="center">
+
+<font color="#ffffff" font size="4px" ><p align=left><a href="face.php">
+
+<img src="images/facebook-icon.png" height="35px" width="60px">
+<img src="images/youtube.jpg" height="35px" width="60px"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;copyRight&copy;<font size="4px">ATTCR Online Reservation System. Design By </font><a href="#"><font color="green" >IT 4Th year Students</a></font></p>
+</td>
+</tr>
+</table>
+</body>
+</center>
+</html>
+

@@ -1,0 +1,7 @@
+<li><b><a href="customer.html">Select</a></b>
+  <ul>
+     		<li><b><a href="view vehicle.html">view vehicle </a></b></li>
+			<li><b><a href="update rent.html">update rent</a></b></li>
+            <li><b><a href="cancel reservation .html">cancel reservation </a></b></li>
+          </ul>
+		  </li>
